@@ -17,12 +17,16 @@ module.exports = {
         },
     ],
     parser: '@typescript-eslint/parser',
-    plugins: ['@typescript-eslint', '@stylistic'],
+    plugins: ['@typescript-eslint', '@stylistic', 'import'],
     parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
+    ignorePatterns: ['.eslintrc.js'],
     rules: {
+        '@typescript-eslint/no-explicit-any': 'off',
+        '@typescript-eslint/explicit-function-return-type': 'off',
+        '@typescript-eslint/strict-boolean-expressions': ['error', { allowAny: true }],
         'import/order': [
             'error',
             {

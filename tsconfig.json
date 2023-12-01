@@ -33,7 +33,6 @@
     "useUnknownInCatchVariables": true,               /* Default catch clause variables as 'unknown' instead of 'any'. */
     "noUnusedLocals": true,                           /* Enable error reporting when local variables aren't read. */
     "noUncheckedIndexedAccess": true,                 /* Add 'undefined' to a type when accessed using an index. */
-    "noPropertyAccessFromIndexSignature": true,       /* Enforces using indexed accessors for keys declared using an indexed type. */
 
     /* Completeness */
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
