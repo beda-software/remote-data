@@ -138,6 +138,7 @@ export function sequenceMap<I, F>(remoteDataMap: RemoteDataResultMap<I, F>): Rem
 export function sequenceMap<I, F>(remoteDataMap: RemoteDataMap<I, F>): RemoteData<I, F[]>
 export function sequenceMap<I, F>(remoteDataMap: RemoteDataMap<I, F>): RemoteData<I, F[]> {
     const keys = Object.keys(remoteDataMap)
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
     const remoteDataArray = Object.values(remoteDataMap) as Array<RemoteDataResult<any>>
 
     return mapSuccess(sequenceArray(remoteDataArray), createKeysMapTransformer(keys))
