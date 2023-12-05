@@ -1,8 +1,10 @@
 {
   "name": "@beda.software/remote-data",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Services, utils, React hooks and components to work with remote data",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "files": ["dist", "src"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install",
