@@ -9,7 +9,7 @@ module.exports = {
     printWidth: 120,
     overrides: [
         {
-            files: '*.yaml',
+            files: ['*.yaml', '*.json'],
             options: {
                 tabWidth: 2,
             },
