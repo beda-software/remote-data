@@ -17,7 +17,7 @@
     "sourceMap": true,                                /* Create source map files for emitted JavaScript files. */
     "inlineSources": true,
     "outDir": "dist",                                   /* Specify an output folder for all emitted files. */
-    "noEmit": false,                                   /* Disable emitting files from a compilation. */
+    "noEmit": true,                                   /* Disable emitting files from a compilation. */
     "noEmitOnError": true,                            /* Disable emitting files if any type checking errors are reported. */
     "declarationDir": "dist/types",                           /* Specify the output directory for generated declaration files. */
 
