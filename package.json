@@ -1,6 +1,6 @@
 {
   "name": "@beda.software/remote-data",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Services, utils, React hooks and components to work with remote data",
   "main": "dist/index.js",
   "types": "dist/types/index.d.ts",
