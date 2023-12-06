@@ -14,6 +14,7 @@ import {
     loading,
     notAsked,
 } from '../states'
+export * from './instance'
 
 export async function service<S = any, F = any>(config: AxiosRequestConfig): Promise<RemoteDataResult<S, F>> {
     try {
