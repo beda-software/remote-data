@@ -7,4 +7,12 @@ module.exports = {
     trailingComma: 'all',
     tabWidth: 4,
     printWidth: 120,
+    overrides: [
+        {
+            files: '*.yaml',
+            options: {
+                tabWidth: 2,
+            },
+        },
+    ],
 }
