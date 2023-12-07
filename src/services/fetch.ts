@@ -5,7 +5,7 @@ export interface FetchError {
     status?: number
 }
 
-export async function service<S = any>(
+export async function serviceFetch<S = any>(
     request: Request | URL,
     init?: RequestInit,
 ): Promise<RemoteDataResult<S, FetchError>> {
