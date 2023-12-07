@@ -1,6 +1,3 @@
-import { type AxiosRequestConfig } from 'axios'
-
-import { axiosInstance } from './instance'
 import {
     failure,
     isFailure,
@@ -14,18 +11,8 @@ import {
     loading,
     notAsked,
 } from '../states'
-export * from './instance'
 export * from './fetch'
-
-export async function service<S = any, F = any>(config: AxiosRequestConfig): Promise<RemoteDataResult<S, F>> {
-    try {
-        const response = await axiosInstance(config)
-
-        return success(response.data)
-    } catch (err: any) {
-        return failure(err.response ? err.response.data : err.message)
-    }
-}
+export * from './init'
 
 export async function applyDataTransformer<S = any, F = any, R = any>(
     servicePromise: Promise<RemoteDataResult<S, F>>,

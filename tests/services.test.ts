@@ -1,5 +1,4 @@
 import {
-    service,
     mapFailure,
     mapSuccess,
     applyDataTransformer,
@@ -11,6 +10,7 @@ import {
     resolveArray,
     type PromiseRemoteDataResultMap,
 } from '../src/services'
+import { init } from '../src/services/init'
 import { success, failure, notAsked, loading } from '../src/states'
 
 describe('Service `service`', () => {
@@ -25,6 +25,8 @@ describe('Service `service`', () => {
             isTransformed: true,
         }
     }
+
+    const { service } = init()
 
     describe('Method `service`', () => {
         test('returns success response', async () => {

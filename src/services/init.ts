@@ -32,7 +32,7 @@ export function buildQueryParams(params: Record<string, any>) {
     return Object.entries(params).reduce<string[]>(packEntry, []).join('&')
 }
 
-export function init(baseURL: string) {
+export function init(baseURL?: string) {
     const axiosInstance = axios.create({
         paramsSerializer: buildQueryParams,
         headers: {
@@ -44,6 +44,9 @@ export function init(baseURL: string) {
 
     return {
         axiosInstance,
+        setInstanceBaseURL: (baseURL: string) => {
+            axiosInstance.defaults.baseURL = baseURL
+        },
         setInstanceToken: (token: Token) => {
             axiosInstance.defaults.headers.Authorization = `${token.token_type || 'Bearer'} ${token.access_token}`
         },

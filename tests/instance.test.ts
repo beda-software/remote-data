@@ -1,13 +1,7 @@
-import {
-    axiosInstance,
-    buildQueryParams,
-    setInstanceBaseURL,
-    setInstanceToken,
-    resetInstanceToken,
-} from '../src/services/instance'
-
+import { buildQueryParams, init } from '../src/services/init'
 describe('Service `instance`', () => {
     test('method `setInstanceBaseURL`', () => {
+        const { axiosInstance, setInstanceBaseURL } = init()
         const baseURL = 'fakeURL'
 
         setInstanceBaseURL(baseURL)
@@ -15,6 +9,7 @@ describe('Service `instance`', () => {
     })
 
     test('methods `setInstanceToken` and `resetInstanceToken`', () => {
+        const { axiosInstance, setInstanceToken, resetInstanceToken } = init()
         setInstanceToken({
             access_token: 'access_token',
             token_type: 'token_type',
