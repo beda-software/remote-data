@@ -7,6 +7,8 @@ export interface Token {
     token_type: string
 }
 
+export type RequestService = <S = any, F = any>(config: AxiosRequestConfig<any>) => Promise<RemoteDataResult<S, F>>
+
 const flatten = (list: any[]): any[] =>
     list.reduce((a: any[], b: any) => a.concat(Array.isArray(b) ? flatten(b) : b), [])
 
