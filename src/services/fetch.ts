@@ -6,7 +6,7 @@ export interface FetchError {
 }
 
 export async function serviceFetch<S = any>(
-    request: Request | URL,
+    request: Request | URL | string,
     init?: RequestInit,
 ): Promise<RemoteDataResult<S, FetchError>> {
     try {
